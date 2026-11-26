@@ -1,1 +1,21 @@
+---
 
+### 2. `config/backup.conf.example`
+```bash
+# Example configuration for Automated Backup & Integrity Verifier
+# Copy this file to config/backup.conf and update values for your environment.
+
+# Space-separated list of directories to back up
+SOURCE_DIRS="/var/www/app-data /etc/nginx"
+
+# Destination directory for backup archives and checksums
+BACKUP_DIR="/var/backups/verifier"
+
+# Log file path
+LOG_FILE="/var/log/backup_verifier.log"
+
+# Number of days to keep older backup archives
+RETENTION_DAYS=14
+
+# Optional webhook URL for failure notifications (leave empty to disable)
+ALERT_WEBHOOK_URL=""
